@@ -24,7 +24,7 @@ export class ReservationsService {
     return this.reservationsRepository.findOne({ _id });
   }
 
-  update(id: number, updateReservationDto: UpdateReservationDto) {
+  update(id: string, updateReservationDto: UpdateReservationDto) {
     return this.reservationsRepository.findOneAndUpdate(
       { _id: id },
       { $set: updateReservationDto },
